@@ -5,7 +5,7 @@ import BigCalendar from "@/components/BigCalendar";
 
 const TeacherPage = () => {
   return (
-    <div className="flex-1 flex-col gap-4 xl:flex-row ">
+    <div className="flex-1 flex flex-col gap-4 xl:flex-row ">
       {/* Left */}
       <div className="w-full xl:w-2/3">
         <div className="h-full bg-white p-4 rounded-md">

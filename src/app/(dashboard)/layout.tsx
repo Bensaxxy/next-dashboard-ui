@@ -23,11 +23,7 @@ export default function DashboardLayout({
         <Menu />
       </div>
       {/* Right */}
-<<<<<<< HEAD:src/app/dashboard/layout.tsx
       <div className=" w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
-=======
-      <div className=" w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll pl-3 flex flex-col">
->>>>>>> cbbb91382491851a9e0018c62918a26556432f41:src/app/(dashboard)/layout.tsx
         <Navbar />
         {children}
       </div>
