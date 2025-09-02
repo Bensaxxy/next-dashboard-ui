@@ -14,7 +14,7 @@ type Teacher = {
   photo: string;
   phone: string;
   subjects: string[];
-  classess: string[]; // ✅ fixed to array
+  classes: string[]; // ✅ fixed to array
   address: string;
 };
 
@@ -35,8 +35,8 @@ const columns = [
   },
   {
     header: "Classes",
-    accessor: "classess", // ✅ match data
-    className: "hidden md:table-cell",
+    accessor: "classes",
+    className: "hidden lg:table-cell",
   },
   {
     header: "Phone",
@@ -56,8 +56,11 @@ const columns = [
 
 const TeacherListPage = () => {
   const renderRow = (item: Teacher) => (
-    <tr key={item.id}>
-      <td>
+    <tr
+      key={item.id}
+      className=" border-b border-gray200 even:bg-slate-50 text-sm hover:bg-lamePurpleLight"
+    >
+      <td className=" flex items-center gap-4 p-4">
         <Image
           src={item.photo}
           alt={item.name}
@@ -72,7 +75,7 @@ const TeacherListPage = () => {
       </td>
       <td className="hidden md:table-cell">{item.teacherId}</td>
       <td className="hidden md:table-cell">{item.subjects.join(", ")}</td>
-      {/* <td className="hidden md:table-cell">{item.classess.join(", ")}</td> */}
+      <td className="hidden md:table-cell">{item.classes.join(", ")}</td>
       <td className="hidden md:table-cell">{item.phone}</td>
       <td className="hidden md:table-cell">{item.address}</td>
       <td>
